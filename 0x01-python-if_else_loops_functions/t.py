@@ -1,4 +1,4 @@
 #!/usr/bin/python3
-number = 111
+number = -111
 #if number < 0:
-print(number / -10)
+print(number % -10)
