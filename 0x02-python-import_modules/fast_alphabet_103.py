@@ -1,4 +1,5 @@
 #!/usr/bin/python3
-for i in range(65, 91):
-    print("{}".format(chr(i)), end='')
-print('\n')
+def print_alpha():
+    for i in range(65, 91):
+        print("{}".format(chr(i)), end='')
+    print('\n')
