@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" empty class Rectangle that defines arectangle """
+
+
 class Rectangle:
     """ class rectangle """
     def __init__(self, width=0, height=0):
