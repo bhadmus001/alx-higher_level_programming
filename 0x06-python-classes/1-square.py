@@ -13,7 +13,6 @@ class Square:
             size (int): size of the square
         """
         self.__size = size
-       
 
     def get_size():
         """getter of __size
