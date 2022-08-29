@@ -18,7 +18,7 @@ class Rectangle:
     def width(self, value):
         """ width setter"""
         if type(value) is not int:
-            raise TypeError("width must be integer")
+            raise TypeError("width must be an integer")
         elif value < 0:
             raise ValueError("width must be >= 0")
         else:
@@ -33,7 +33,7 @@ class Rectangle:
     def height(self, value):
         """ height setter """
         if type(value) is not int:
-            raise TypeError("height must be integer")
+            raise TypeError("height must be an integer")
         elif value < 0:
             raise ValueError("height must be >= 0")
         else:
@@ -52,12 +52,11 @@ class Rectangle:
 
     def __str__(self):
         """ return the rectangle with character # """
-        S = str(self.print_symbol)
         H = self.__height
         W = self.__width
         if self.__width == 0 or self.__height == 0:
             return ""
-        return "\n".join(["".join([(S) for i in range(W)]) for j in range(H)])
+        return "\n".join(["#".join([(S) for i in range(W)]) for j in range(H)])
 
     def __repr__(self):
         """ return  a string rpresentation of this rectangle """
