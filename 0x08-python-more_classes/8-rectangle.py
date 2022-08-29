@@ -6,6 +6,7 @@ class Rectangle:
     """ class rectangle """
     number_of_instances = 0
     print_symbol = "#"
+
     def __init__(self, width=0, height=0):
         """ instantiation of rectangle with optional width and height """
         self.width = width
@@ -50,6 +51,7 @@ class Rectangle:
             raise TypeError("rect_2 must be an instance of rectangle")
         else:
             return rect_1 if rect_1.area() >= rect_2.area() else rect_2
+
     def area(self):
         """ area """
         return self.__width * self.__height
@@ -63,13 +65,25 @@ class Rectangle:
 
     def __str__(self):
         """ return the rectangle with character # """
+        S = str(self.print_symbol)
+        H = self.__height
+        W = self.__width
         if self.__width == 0 or self.__height == 0:
             return ""
-        return ("\n".join(["".join([str(self.print_symbol) for i in range(self.__width)]) for j in range(self.__height)]))
+        return "\n".join(["".join([(S) for i in range(W)]) for j in range(H)])
+
+    def __str__(self):
+        """ return the rectangle with character # """
+        S = str(self.print_symbol)
+        H = self.__height
+        W = self.__width
+        if self.__width == 0 or self.__height == 0:
+            return ""
+        return "\n".join(["".join([(S) for i in range(W)]) for j in range(H)])
 
     def __repr__(self):
         """ return  a string rpresentation of this rectangle """
-        return "Rectangle({}, {})".format(self.__width,self.__height)
+        return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
         """ print a message when an instance of rectangle is deleted """

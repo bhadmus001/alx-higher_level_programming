@@ -54,7 +54,7 @@ class Rectangle:
 
     @classmethod
     def square(cls, size=0):
-        return Rectangle(size, size)
+        return cls(size, size)
 
     def area(self):
         """ area """
@@ -69,9 +69,12 @@ class Rectangle:
 
     def __str__(self):
         """ return the rectangle with character # """
+        S = str(self.print_symbol)
+        H = self.__height
+        W = self.__width
         if self.__width == 0 or self.__height == 0:
             return ""
-        return ("\n".join(["".join([str(self.print_symbol) for i in range(self.__width)]) for j in range(self.__height)]))
+        return "\n".join(["".join([(S) for i in range(W)]) for j in range(H)])
 
     def __repr__(self):
         """ return  a string rpresentation of this rectangle """
