@@ -56,7 +56,7 @@ class Rectangle:
         W = self.__width
         if self.__width == 0 or self.__height == 0:
             return ""
-        return "\n".join(["#".join([(S) for i in range(W)]) for j in range(H)])
+        return "\n".join(["".join(["#" for i in range(W)]) for j in range(H)])
 
     def __repr__(self):
         """ return  a string rpresentation of this rectangle """
