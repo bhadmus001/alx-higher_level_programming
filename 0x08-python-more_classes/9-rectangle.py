@@ -6,6 +6,7 @@ class Rectangle:
     """ class rectangle """
     number_of_instances = 0
     print_symbol = "#"
+
     def __init__(self, width=0, height=0):
         """ instantiation of rectangle with optional width and height """
         self.width = width
@@ -74,7 +75,7 @@ class Rectangle:
 
     def __repr__(self):
         """ return  a string rpresentation of this rectangle """
-        return "Rectangle({}, {})".format(self.__width,self.__height)
+        return "Rectangle({}, {})".format(self.__width, self.__height)
 
     def __del__(self):
         """ print a message when an instance of rectangle is deleted """
